@@ -14,8 +14,6 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Erlan Campos | Desenvolvedor Web &amp; Analista de T.I">
 <meta property="og:description" content="Sites, sistemas e suporte técnico em Vitória da Conquista-BA.">
-<!-- Quando tiver o domínio: <link rel="canonical" href="https://SEU-DOMINIO/"> e <meta property="og:image" content="https://SEU-DOMINIO/og.jpg"> -->
-<!-- Favicon externo -->
 <link rel="icon" type="image/svg+xml" href="Favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +23,9 @@
 :root{
   --bg:#061428; --panel:#0a2244; --band:#0d2d5e;
   --orange:#F57C00; --orange-l:#ffab40;
-  --text:rgba(255,255,255,.88); --muted:rgba(255,255,255,.75); /* ALTERADO: .72 → .75 (WCAG AA mínimo) */
+  --text:rgba(255,255,255,.88); --muted:rgba(255,255,255,.75); 
   --line:rgba(255,255,255,.14);
-  --section:clamp(80px,7vw,112px); /* ALTERADO: whitespace vertical mais generoso — min 80px, max 112px */
+  --section:clamp(80px,7vw,112px); 
   --disp:'Barlow Condensed','Arial Narrow',sans-serif;
   --body:'Barlow','Segoe UI',Arial,sans-serif;
 }
@@ -40,17 +38,14 @@ img{max-width:100%;display:block}
 h1,h2,h3,.flow b,.steps b{text-wrap:balance}
 p,dd,.flow p,.steps span{text-wrap:pretty}
 a{color:inherit;text-decoration:none}
-/* ALTERADO: focus-visible com border-radius para consistência visual */
 :focus-visible{outline:2px solid var(--orange-l);outline-offset:3px;border-radius:4px}
 .skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--orange);color:#1a0d00;font-weight:700;padding:10px 18px}
 .skip:focus{left:16px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
-/* ALTERADO: ultra-wide content cap */
 @media (min-width:1440px){.wrap{max-width:1200px}}
 section{padding:var(--section) 0;content-visibility:auto;contain-intrinsic-size:auto 720px}
 .alt{background:var(--panel)}
 
-/* ALTERADO: Nav glassmorphism — backdrop-filter + bg ligeiramente mais transparente */
 nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(6,20,40,.82);border-bottom:1px solid var(--line);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
 .logo{display:flex;align-items:baseline;gap:3px;line-height:1;white-space:nowrap;font-size:32px}
@@ -67,7 +62,6 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .burger,.m-only{display:none}
 .burger{width:44px;height:44px;align-items:center;justify-content:center;margin-left:auto;background:none;border:1px solid var(--line);border-radius:6px;color:#fff;cursor:pointer}
 
-/* Botões — sem translate/scale no hover, apenas cor/glow */
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 28px;font-family:var(--body);font-weight:700;font-size:16px;border:2px solid var(--orange);border-radius:6px;cursor:pointer;transition:background .2s,color .2s,border-color .2s,box-shadow .2s}
 .btn-p{background:#25D366;color:#fff;border-color:#25D366;box-shadow:0 0 16px rgba(37,211,102,.4)}
 .btn-p:hover{background:#20bd5a;border-color:#20bd5a;color:#fff;box-shadow:0 0 24px rgba(37,211,102,.65)}
@@ -76,10 +70,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .btn-g:hover{background:rgba(255,255,255,.08);border-color:var(--orange-l)}
 nav .btn{min-height:40px;padding:8px 18px;font-size:15px}
 
-/* Topo */
 .hero{padding:136px 0 64px}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.7fr);gap:72px;align-items:center}
-/* ALTERADO: hero h1 — mínimo reduzido para 38px (melhor em mobile <380px) */
 h1{font-family:var(--disp);font-weight:900;font-size:clamp(38px,6.4vw,76px);line-height:1.02;letter-spacing:.005em;margin-bottom:26px;max-width:15ch}
 .lead{font-size:20px;color:var(--text);max-width:52ch;margin-bottom:36px}
 .cta{display:flex;gap:14px;flex-wrap:wrap}
@@ -91,26 +83,20 @@ h1{font-family:var(--disp);font-weight:900;font-size:clamp(38px,6.4vw,76px);line
 .photo::after{content:'';position:absolute;inset:16px -16px -16px 16px;border:2px solid var(--orange);z-index:-1}
 .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;background:linear-gradient(160deg,#103a78,#08203f)}
 
-/* Títulos de seção */
 h2{font-family:var(--disp);font-weight:900;font-size:clamp(38px,5vw,56px);line-height:1.05;letter-spacing:.01em;margin-bottom:16px}
 h2::before{content:"//";color:var(--orange);margin-right:14px}
-/* ALTERADO: .intro e .txt com opacidade aumentada para legibilidade WCAG AA */
 .intro{color:rgba(255,255,255,.82);font-size:19px;max-width:58ch;margin-bottom:36px}
 .txt{color:rgba(255,255,255,.82);font-size:18.5px;max-width:64ch;margin-bottom:16px}
 
-/* Trajetória */
 .flow{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:36px;margin-top:40px;position:relative}
 .flow::before{content:'';position:absolute;top:10px;left:11px;right:8px;height:2px;background:var(--orange)}
 .flow::after{content:'';position:absolute;top:3px;right:-4px;border:8px solid transparent;border-left:12px solid var(--orange);border-right:0}
 .flow li{position:relative;padding-top:44px;display:grid;grid-template-rows:subgrid;grid-row:span 2}
 .flow li::before{content:'';position:absolute;top:0;left:0;width:22px;height:22px;border-radius:50%;background:var(--panel);border:3px solid var(--orange)}
 .flow li:last-child::before{background:var(--orange)}
-/* ALTERADO: .flow b mobile pequeno — clamp reduz para <380px */
 .flow b{font-family:var(--disp);font-size:clamp(22px,5vw,29px);font-weight:800;line-height:1.12;letter-spacing:.01em;margin-bottom:10px}
-/* ALTERADO: .flow p opacidade aumentada */
 .flow p{font-size:17px;color:rgba(255,255,255,.78);line-height:1.6}
 
-/* Serviços — layout original .svc */
 .svc{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.5fr);background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:4px;margin-bottom:20px}
 .svc-h{padding:32px 34px;border-right:1px solid var(--line)}
 .svc h3{font-family:var(--disp);font-weight:900;font-size:40px;line-height:1.08;letter-spacing:.01em;margin-bottom:14px}
@@ -120,9 +106,7 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
 .svc dl>div:first-child{border-top:0}
 .svc dt{font-weight:700;font-size:22px;line-height:1.3;color:var(--orange-l);margin-bottom:6px}
 .svc dd{font-size:17.5px;color:rgba(255,255,255,.78);line-height:1.65}
-/* ALTERADO: Steps — borda superior mais elegante + glow */
 .steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
-/* ALTERADO: border hairline + glow no topo */
 .steps li{
   counter-increment:s;
   border-top:1px solid rgba(245,124,0,.5);
@@ -131,13 +115,9 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
 }
 .steps li::before{content:counter(s);display:block;font-family:var(--disp);font-weight:900;font-size:64px;line-height:1;color:var(--orange);margin-bottom:14px}
 .steps b{display:block;font-family:var(--disp);font-weight:800;font-size:29px;line-height:1.12;margin-bottom:10px}
-/* ALTERADO: .steps span opacidade aumentada */
 .steps span{display:block;font-size:17.5px;color:rgba(255,255,255,.78);line-height:1.6}
 
-/* ============================================
-   ALTERADO: Seção Contato — redesenhada completa
-   ============================================ */
-.contact{background:var(--band);border-top:1px solid rgba(245,124,0,.3)} /* ALTERADO: borda hairline laranja */
+.contact{background:var(--band);border-top:1px solid rgba(245,124,0,.3)}
 .contact-grid{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);
@@ -162,7 +142,7 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
   margin-bottom:20px;
   color:#fff;
 }
-.contact-h2::before{} /* herda o // laranja padrão do h2 */
+.contact-h2::before{} 
 .contact-sub{
   font-size:17.5px;
   color:rgba(255,255,255,.72);
@@ -192,7 +172,6 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
   border-color:rgba(245,124,0,.25);
   background:rgba(245,124,0,.06);
 }
-/* Formulário */
 .contact-form-wrap{
   background:rgba(255,255,255,.03);
   border:1px solid rgba(255,255,255,.09);
@@ -201,7 +180,6 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
   box-shadow:0 0 0 1px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.06);
 }
 .contact-form{display:flex;flex-direction:column;gap:20px}
-/* Floating labels */
 .field{position:relative}
 .f-input{
   width:100%;
@@ -241,7 +219,6 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
   transition:top .18s ease,font-size .18s ease,color .18s ease,transform .18s ease;
   line-height:1;
 }
-/* Floating state: quando há conteúdo */
 .f-input:focus~.f-label,
 .f-input:not(:placeholder-shown)~.f-label{
   top:10px;
@@ -252,7 +229,6 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
   letter-spacing:.04em;
   text-transform:uppercase;
 }
-/* Select */
 .field-select{position:relative}
 .f-select{cursor:pointer;padding-right:40px}
 .f-select option{
@@ -264,7 +240,6 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
   color:rgba(255,255,255,.4);
   background-color:#061428;
 }
-/* Para select o float ativa via classe via JS */
 .f-select.has-value~.f-label{
   top:10px;
   transform:none;
@@ -282,7 +257,6 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
   pointer-events:none;
   color:rgba(255,255,255,.4);
 }
-/* Textarea */
 .f-textarea{
   resize:vertical;
   min-height:110px;
@@ -302,7 +276,6 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
   letter-spacing:.04em;
   text-transform:uppercase;
 }
-/* Botão submit */
 .btn-submit{
   display:inline-flex;
   align-items:center;
@@ -311,7 +284,6 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
   width:100%;
   min-height:52px;
 }
-/* Feedback toast */
 .form-feedback{
   font-size:14.5px;
   line-height:1.5;
@@ -342,7 +314,6 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
   .form-feedback{transition:none}
 }
 
-/* Ticker */
 .ticker{background:var(--orange);color:#1a0d00;overflow:hidden}
 .ticker-track{display:flex;width:max-content;animation:tick 46s linear infinite}
 .ticker:hover .ticker-track{animation-play-state:paused}
@@ -352,21 +323,13 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
 @keyframes tick{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto}.ticker-track{animation:none}.ticker ul+ul{display:none}}
 
-/* Entrada única do topo */
 @media (prefers-reduced-motion:no-preference){
   .hero .wrap>*{animation:in .8s ease both}
   .hero .wrap>*:last-child{animation-delay:.15s}
   @keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 }
-/* prefers-reduced-motion global — cobre todos os elementos incluindo novos */
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
-footer{padding:28px 0;background:#040e1d;font-size:15px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-
-/* =============================================
-   RESPONSIVIDADE REFINADA MOBILE & TABLET
-   ============================================= */
 @media (max-width: 960px){
   .svc{grid-template-columns:1fr;margin-bottom:16px}
   .svc-h{border-right:0;border-bottom:1px solid var(--line);padding:26px 24px 20px}
@@ -377,7 +340,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 @media (max-width: 820px){
   :root{--section:clamp(52px,7vw,72px)}
   
-  /* Header & Navegação */
   nav .wrap{height:60px;padding:0 16px;gap:10px}
   .logo{font-size:clamp(22px,5.2vw,27px)}
   nav .btn{
@@ -416,7 +378,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   .menu a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
   .menu li:last-child a{border-bottom:0;color:#25D366;font-weight:700}
 
-  /* Hero */
   .hero{padding:92px 0 40px}
   .hero .wrap{
     grid-template-columns:1fr;
@@ -472,12 +433,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
     margin-bottom:2px;
   }
 
-  /* Títulos de seção */
   h2{font-size:clamp(28px,6.5vw,38px);line-height:1.1;margin-bottom:12px}
   .intro{font-size:16.5px;line-height:1.6;margin-bottom:28px}
   .txt{font-size:16.5px;line-height:1.6}
 
-  /* Contato */
   .contact-grid{grid-template-columns:1fr;gap:36px}
   .contact-h2{font-size:clamp(28px,6.8vw,42px);margin-bottom:14px}
   .contact-sub{font-size:16px;line-height:1.6;margin-bottom:22px}
@@ -498,7 +457,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   body{font-size:16.5px}
   .wrap{padding:0 18px}
 
-  /* Trajetória (.flow) */
   .flow{
     grid-template-columns:1fr;
     gap:26px;
@@ -545,7 +503,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
     line-height:1.55;
   }
 
-  /* Serviços (.svc) */
   .svc{border-left-width:4px}
   .svc-h{padding:20px 16px 16px}
   .svc h3{font-size:clamp(22px,5.8vw,28px);margin-bottom:6px}
@@ -555,7 +512,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   .svc dt{font-size:17.5px;margin-bottom:3px}
   .svc dd{font-size:14.5px;line-height:1.55}
 
-  /* Como funciona (.steps) */
   .steps{grid-template-columns:1fr;gap:20px}
   .steps li{
     display:grid;
@@ -573,13 +529,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   .steps b{font-size:19px;margin-bottom:2px}
   .steps span{font-size:14.5px;line-height:1.5}
 
-  /* Ticker */
   .ticker li{padding:12px 0;font-size:18px}
   .ticker li::after{margin:0 16px;width:6px;height:6px}
-
-  /* Footer */
-  footer{padding:22px 0;text-align:center}
-  footer .wrap{flex-direction:column;align-items:center;gap:10px}
 }
 
 @media (max-width: 380px){
@@ -696,15 +647,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   </div>
 </section>
 
-<!-- ALTERADO: Seção contato totalmente redesenhada com formulário + floating labels -->
 <section id="contato" class="contact">
   <div class="wrap">
     <div class="contact-grid">
-      <!-- COLUNA ESQUERDA -->
       <div class="contact-info">
         <h2 class="contact-h2">Vamos iniciar<br>seu projeto?</h2>
         <p class="contact-sub">Seja para criar um sistema do zero, posicionar sua empresa no Google ou reviver um computador lento, estou à disposição para ajudar.</p>
-        <!-- Links diretos -->
         <div class="contact-links">
           <a href="#contato" data-mail class="contact-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
@@ -721,20 +669,16 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
         </div>
       </div>
 
-      <!-- COLUNA DIREITA: FORMULÁRIO -->
       <div class="contact-form-wrap">
         <form id="form-contato" class="contact-form" novalidate aria-label="Formulário de contato">
-          <!-- Nome -->
           <div class="field">
             <input type="text" id="f-nome" name="nome" class="f-input" required aria-required="true" placeholder=" " autocomplete="name">
             <label for="f-nome" class="f-label">Seu nome</label>
           </div>
-          <!-- WhatsApp/E-mail -->
           <div class="field">
             <input type="text" id="f-contato-val" name="contato" class="f-input" required aria-required="true" placeholder=" " autocomplete="tel">
             <label for="f-contato-val" class="f-label">WhatsApp ou E-mail</label>
           </div>
-          <!-- Tipo de Projeto -->
           <div class="field field-select">
             <select id="f-tipo" name="tipo" class="f-input f-select" required aria-required="true">
               <option value="" disabled selected></option>
@@ -746,17 +690,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
             <label for="f-tipo" class="f-label">Tipo de projeto</label>
             <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </div>
-          <!-- Mensagem -->
           <div class="field">
             <textarea id="f-msg" name="mensagem" class="f-input f-textarea" required aria-required="true" rows="4" placeholder=" "></textarea>
             <label for="f-msg" class="f-label">Mensagem</label>
           </div>
-          <!-- Submit -->
           <button type="submit" class="btn btn-p btn-submit">
             Enviar mensagem
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
-          <!-- Feedback -->
           <div id="form-feedback" class="form-feedback" role="status" aria-live="polite" aria-atomic="true"></div>
         </form>
       </div>
@@ -765,23 +706,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© <span id="ano"></span> Erlan Campos</span>
-    <a href="#topo">Voltar ao topo</a>
-  </div>
-</footer>
-
 <script>
-/* ===== PREENCHA AQUI SEUS DADOS ===== */
 const CONFIG = {
-  whatsapp: "77999880394",   // com DDD. Ex.: "77999999999" (o 55 é adicionado sozinho)
-  instagram: "",  // link completo. Ex.: "https://instagram.com/seuusuario"
-  linkedin: "",   // link completo do seu perfil
-  email: "",      // Ex.: "contato@seudominio.com"
+  whatsapp: "77999880394",
+  instagram: "",
+  linkedin: "",
+  email: "",
   mensagem: "Olá, Erlan! Vim pelo seu site e gostaria de um orçamento."
 };
-/* ==================================== */
 (function(){
   var d = document;
   var num = (CONFIG.whatsapp || "").replace(/\D/g, "");
@@ -801,20 +733,17 @@ const CONFIG = {
   });
   d.getElementById("ano").textContent = new Date().getFullYear();
 
-  /* Menu no celular */
   var nav = d.querySelector("nav"), burger = d.querySelector(".burger");
-  // ALTERADO: setMenu com scroll lock no mobile
   function setMenu(open){
     nav.classList.toggle("open", open);
     burger.setAttribute("aria-expanded", open);
     burger.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
-    document.body.style.overflow = open ? "hidden" : ""; // ALTERADO: scroll lock
+    document.body.style.overflow = open ? "hidden" : "";
   }
   burger.addEventListener("click", function(){ setMenu(!nav.classList.contains("open")); });
   d.querySelectorAll(".menu a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
   d.addEventListener("keydown", function(e){ if (e.key === "Escape") setMenu(false); });
 
-  /* Seção ativa no menu */
   if ("IntersectionObserver" in window){
     var links = [].slice.call(d.querySelectorAll(".menu a[href^='#']:not([data-wa])"));
     var spy = new IntersectionObserver(function(entries){
@@ -829,13 +758,10 @@ const CONFIG = {
     ["sobre", "servicos", "como"].forEach(function(id){ var s = d.getElementById(id); if (s) spy.observe(s); });
   }
 
-
-  // ALTERADO: Formulário de contato com floating label no select e validação
   (function(){
     var form = d.getElementById("form-contato");
     if (!form) return;
 
-    /* Select floating label */
     var sel = d.getElementById("f-tipo");
     if (sel){
       sel.addEventListener("change", function(){
@@ -883,7 +809,6 @@ const CONFIG = {
       }, 600);
     });
 
-    /* Remove invalid ao digitar */
     form.querySelectorAll(".f-input").forEach(function(input){
       input.addEventListener("input", function(){ this.classList.remove("invalid"); });
     });
