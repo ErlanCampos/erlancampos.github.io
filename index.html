@@ -1,656 +1,711 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   <!-- Favicon carregado direto no código (Burla o cache na hora) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'%3E%3Cdefs%3E%3ClinearGradient id='bgGrad' x1='0%25' y1='0%25' 
-       x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230d2d5e;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a3a6e;stop-opacity:1' /%3E%3C/linearGradient%3E%3Cfilter id='glow' x='-20%25' 
-       y='-20%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='5' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Ccircle 
-       cx='256' cy='256' r='240' fill='url(%23bgGrad)' /%3E%3Ccircle cx='256' cy='256' r='240' fill='none' stroke='%23F57C00' stroke-width='12' /%3E%3Cg filter='url(%23glow)' font-family='Barlow Condensed, Segoe UI, Arial, sans-serif' font-weight='900' 
-       text-anchor='middle'%3E%3Ctext y='325'%3E%3Ctspan x='100' fill='%23F57C00' font-size='220'%3E[%3C/tspan%3E%3Ctspan x='178' fill='%23FFFFFF' font-size='200'%3E%26lt;%3C/tspan%3E%3Ctspan x='256' fill='%23FFFFFF' font-size='200'%3E/%3C/tspan%3E%3Ctspan 
-       x='334' fill='%23F57C00' font-size='200'%3E%26gt;%3C/tspan%3E%3Ctspan x='412' fill='%23F57C00' font-size='220'%3E]%3C/tspan%3E%3C/text%3E%3C/g%3E%3Crect x='80' y='410' width='352' height='8' rx='4' fill='rgba(255,255,255,0.1)' /%3E%3Crect x='80' y='410' width='176'
-       height='8' rx='4' fill='%23F57C00' /%3E%3C/svg%3E">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Erlan Campos · Desenvolvedor Web & T.I Profissional</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&family=Barlow+Condensed:wght@300;700;900&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#061428">
+<meta name="color-scheme" content="dark">
+<script>document.documentElement.className+=" js"</script>
+<title>Erlan Campos | Desenvolvedor Web &amp; Analista de T.I</title>
+<meta name="description" content="Sites, landing pages, sistemas sob medida, automação com IA e suporte técnico em Vitória da Conquista-BA.">
+<meta name="author" content="Erlan Campos">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Erlan Campos | Desenvolvedor Web &amp; Analista de T.I">
+<meta property="og:description" content="Sites, sistemas e suporte técnico em Vitória da Conquista-BA.">
+<!-- Quando tiver o domínio: <link rel="canonical" href="https://SEU-DOMINIO/"> e <meta property="og:image" content="https://SEU-DOMINIO/og.jpg"> -->
+<!-- ALTERADO: Favicon refinado — apenas </> laranja sobre fundo escuro com borda hairline laranja -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23061428'/%3E%3Crect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%23F57C00' stroke-width='1.5'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='monospace%2CArial' font-weight='900' font-size='16' fill='%23F57C00'%3E%3C%2F%3E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@300;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Erlan Campos","jobTitle":"Desenvolvedor Web e Analista de T.I","description":"Sites, landing pages, sistemas sob medida, automação com IA e suporte técnico.","knowsAbout":["Desenvolvimento web","Landing pages","SEO","ERP","Análise de dados","Automação com IA","Suporte técnico de computadores"]}</script>
 <style>
-  :root {
-    --navy: #0d2d5e;
-    --navy-dark: #071a3a;
-    --navy-mid: #0f3570;
-    --orange: #F57C00;
-    --orange-light: #ffab40;
-    --orange-glow: rgba(245,124,0,0.18);
-    --white: #ffffff;
-    --white-80: rgba(255,255,255,0.8);
-    --white-70: rgba(255,255,255,0.7);
-    --white-60: rgba(255,255,255,0.6);
-    --white-50: rgba(255,255,255,0.5);
-    --white-30: rgba(255,255,255,0.3);
-    --white-10: rgba(255,255,255,0.08);
-    --white-5: rgba(255,255,255,0.04);
-    --white-3: rgba(255,255,255,0.03);
-    --card-bg: rgba(7, 20, 50, 0.7);
-    --border: rgba(255,255,255,0.09);
-    --green: #27AE60;
-    --green-glow: rgba(39,174,96,0.15);
-    --green-border: rgba(39,174,96,0.3);
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--navy-dark); color: var(--white); font-family: 'Barlow', sans-serif; overflow-x: hidden; line-height: 1.6; }
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: var(--navy-dark); }
-  ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 2px; }
-  .container { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
-  
-  .section { padding: 60px 0; }
+:root{
+  --bg:#061428; --panel:#0a2244; --band:#0d2d5e;
+  --orange:#F57C00; --orange-l:#ffab40;
+  --text:rgba(255,255,255,.88); --muted:rgba(255,255,255,.75); /* ALTERADO: .72 → .75 (WCAG AA mínimo) */
+  --line:rgba(255,255,255,.14);
+  --section:clamp(80px,7vw,112px); /* ALTERADO: whitespace vertical mais generoso — min 80px, max 112px */
+  --disp:'Barlow Condensed','Arial Narrow',sans-serif;
+  --body:'Barlow','Segoe UI',Arial,sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{text-rendering:optimizeLegibility;background:var(--bg);color:#fff;font-family:var(--body);font-size:18px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:56px 56px}
+img{max-width:100%;display:block}
+::selection{background:var(--orange);color:#1a0d00}
+h1,h2,h3,.flow b,.steps b{text-wrap:balance}
+p,dd,.flow p,.steps span{text-wrap:pretty}
+a{color:inherit;text-decoration:none}
+/* ALTERADO: focus-visible com border-radius para consistência visual */
+:focus-visible{outline:2px solid var(--orange-l);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--orange);color:#1a0d00;font-weight:700;padding:10px 18px}
+.skip:focus{left:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+/* ALTERADO: ultra-wide content cap */
+@media (min-width:1440px){.wrap{max-width:1200px}}
+section{padding:var(--section) 0;content-visibility:auto;contain-intrinsic-size:auto 720px}
+.alt{background:var(--panel)}
 
-  .section-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
-  .section-tag::before { content: ''; width: 28px; height: 2px; background: var(--orange); }
-  .section-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(38px, 5vw, 58px); font-weight: 900; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.01em; color: var(--white); }
-  .section-title span { color: var(--orange); }
-  .service-subtitle { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); grid-column: 1 / -1; margin-bottom: -8px; margin-top: 8px; padding-left: 4px; opacity: 0.8; }
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0; transition: all 0.3s ease; }
-  nav.scrolled { background: rgba(7, 20, 50, 0.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 12px 0; }
-  .nav-inner { display: flex; align-items: center; justify-content: space-between; }
-  .logo { display: flex; align-items: baseline; gap: 3px; line-height: 1; text-decoration: none; }
-  .logo-b { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; color: var(--orange); letter-spacing: -1px; }
-  .logo-i { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.9); }
-  .logo-f { font-family: 'Barlow', sans-serif; font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.9); letter-spacing: 1px; }
-  .logo-s { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 300; color: var(--white-60); margin: 0 2px; }
-  .logo-l { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 900; color: var(--white); }
-  .logo-rb { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; color: var(--white); letter-spacing: -1px; }
-  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-  .nav-links a { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white-70); text-decoration: none; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--white); }
-  .nav-cta { background: var(--orange); color: var(--white) !important; padding: 10px 24px; border-radius: 4px; font-weight: 700 !important; transition: background 0.2s !important; }
-  .nav-cta:hover { background: var(--orange-light) !important; color: var(--navy-dark) !important; }
-  
-  #hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 120px 0 80px; }
-  .hero-bg { position: absolute; inset: 0; pointer-events: none; }
-  .hero-circle1 { position: absolute; right: -200px; top: -200px; width: 700px; height: 700px; border-radius: 50%; border: 100px solid rgba(245,124,0,0.06); }
-  .hero-circle2 { position: absolute; right: 50px; top: 100px; width: 400px; height: 400px; border-radius: 50%; border: 60px solid rgba(245,124,0,0.04); }
-  .hero-circle3 { position: absolute; left: -120px; bottom: -80px; width: 500px; height: 500px; border-radius: 50%; border: 70px solid rgba(255,255,255,0.03); }
-  .hero-line-v { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, transparent, rgba(245,124,0,0.15), transparent); }
-  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 80px 80px; }
-  .hero-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-  .hero-left { animation: fadeUp 0.8s ease both; }
-  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--orange-glow); border: 1px solid rgba(245,124,0,0.3); border-radius: 20px; padding: 8px 18px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 28px; }
-  .hero-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 8px var(--orange); animation: pulse 2s infinite; }
-  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.6; transform: scale(0.8); } }
-  .hero-logo { display: flex; align-items: baseline; gap: 4px; line-height: 1; margin-bottom: 12px; flex-wrap: nowrap; white-space: nowrap; }
-  .hl-b  { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(44px, 5.5vw, 88px); font-weight: 900; color: var(--orange); letter-spacing: -2px; }
-  .hl-i  { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(36px, 4.5vw, 70px); font-weight: 700; color: rgba(255,255,255,0.9); }
-  .hl-f  { font-family: 'Barlow', sans-serif; font-size: clamp(30px, 3.8vw, 60px); font-weight: 300; color: rgba(255,255,255,0.9); letter-spacing: 2px; }
-  .hl-s  { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(36px, 4.5vw, 72px); font-weight: 300; color: var(--white-30); margin: 0 4px; }
-  .hl-l  { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(36px, 4.5vw, 70px); font-weight: 900; color: var(--white); letter-spacing: 1px; }
-  .hl-rb { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(44px, 5.5vw, 88px); font-weight: 900; color: var(--white); letter-spacing: -2px; }
-  .hero-role { font-size: 13px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--white-50); margin-bottom: 28px; }
-  .hero-desc { font-size: 18px; font-weight: 300; color: var(--white-80); line-height: 1.7; margin-bottom: 40px; max-width: 480px; }
-  .hero-desc strong { color: var(--white); font-weight: 600; }
-  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
-  .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--orange); color: var(--white); font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; padding: 16px 32px; border-radius: 4px; transition: all 0.2s; border: none; cursor: pointer; }
-  .btn-primary:hover { background: var(--orange-light); color: var(--navy-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,124,0,0.35); }
-  .btn-primary svg { width: 20px; height: 20px; flex-shrink: 0; }
-  .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--white); font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; padding: 16px 32px; border-radius: 4px; border: 1px solid var(--border); transition: all 0.2s; }
-  .btn-secondary:hover { border-color: rgba(255,255,255,0.3); background: var(--white-5); transform: translateY(-2px); }
-  .response-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--green-glow); border: 1px solid var(--green-border); border-radius: 20px; padding: 8px 16px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); margin-top: 24px; animation: fadeUp 0.8s 0.4s ease both; }
-  .response-badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px rgba(39,174,96,0.6); animation: pulse 2s infinite; }
-  .hero-stats { display: flex; gap: 40px; }
-  .stat-item { display: flex; flex-direction: column; gap: 2px; }
-  .stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 900; color: var(--white); letter-spacing: -0.5px; line-height: 1; }
-  .stat-num span { color: var(--orange); }
-  .stat-label { font-size: 11px; font-weight: 600; color: var(--white-50); letter-spacing: 0.1em; text-transform: uppercase; }
-  
-  .hero-right { position: relative; animation: fadeUp 0.8s 0.2s ease both; height: 100%; display: flex; justify-content: flex-end; }
-  
-  .hero-photo-card {
-    width: 100%;
-    max-width: 480px;
-    aspect-ratio: 3 / 4;
-    border-radius: 16px;
-    overflow: hidden;
-    position: relative;
-    background: linear-gradient(135deg, var(--navy-mid), var(--navy-dark));
-    border: 1px solid var(--border);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-  }
-  
-  .hero-photo-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-  }
-  
-  .photo-overlay {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    text-align: right;
-    z-index: 2;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-  }
-  
-  .photo-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 26px;
-    font-weight: 900;
-    color: var(--white);
-    text-transform: uppercase;
-    line-height: 1;
-    margin-bottom: 6px;
-    letter-spacing: 0.02em;
-  }
-  
-  .photo-role {
-    font-family: 'Barlow', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--white-80);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    line-height: 1.4;
-  }
+/* ALTERADO: Nav glassmorphism — backdrop-filter + bg ligeiramente mais transparente */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(6,20,40,.82);border-bottom:1px solid var(--line);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+.logo{display:flex;align-items:baseline;gap:3px;line-height:1;white-space:nowrap;font-size:32px}
+.logo-b{font-family:var(--disp);font-size:1em;font-weight:900;color:var(--orange);letter-spacing:-1px}
+.logo-i{font-family:var(--disp);font-size:.786em;font-weight:700;color:rgba(255,255,255,.9)}
+.logo-f{font-family:var(--body);font-size:.643em;font-weight:300;color:rgba(255,255,255,.9);letter-spacing:1px}
+.logo-s{font-family:var(--disp);font-size:.786em;font-weight:300;color:rgba(255,255,255,.6);margin:0 2px}
+.logo-l{font-family:var(--disp);font-size:.786em;font-weight:900;color:#fff}
+.logo-rb{font-family:var(--disp);font-size:1em;font-weight:900;color:#fff;letter-spacing:-1px}
+.menu{display:flex;gap:30px;list-style:none;margin-left:auto;font-size:16px;font-weight:500;color:var(--muted)}
+.menu a{padding:6px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.menu a:hover{color:#fff;border-color:var(--orange)}
+.menu a[aria-current="true"]{color:#fff;border-color:var(--orange)}
+.burger,.m-only{display:none}
+.burger{width:44px;height:44px;align-items:center;justify-content:center;margin-left:auto;background:none;border:1px solid var(--line);border-radius:6px;color:#fff;cursor:pointer}
 
-  #servicos { background: var(--navy-dark); }
-  
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+/* Botões — sem translate/scale no hover, apenas cor/glow */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 28px;font-family:var(--body);font-weight:700;font-size:16px;border:2px solid var(--orange);border-radius:6px;cursor:pointer;transition:background .2s,color .2s,border-color .2s,box-shadow .2s}
+.btn-p{background:#25D366;color:#fff;border-color:#25D366;box-shadow:0 0 16px rgba(37,211,102,.4)}
+.btn-p:hover{background:#20bd5a;border-color:#20bd5a;color:#fff;box-shadow:0 0 24px rgba(37,211,102,.65)}
+.btn-p:focus-visible{outline-color:#25D366}
+.btn-g{background:transparent;color:#fff}
+.btn-g:hover{background:rgba(255,255,255,.08);border-color:var(--orange-l)}
+nav .btn{min-height:40px;padding:8px 18px;font-size:15px}
 
-  .service-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; transition: all 0.3s; cursor: default; position: relative; overflow: hidden; }
-  .service-card::before { content: ''; position: absolute; left: 0; top: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--orange), var(--orange-light)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
-  .service-card:hover { border-color: rgba(245,124,0,0.25); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-  .service-card:hover::before { transform: scaleX(1); }
-  .sc-icon { width: 52px; height: 52px; border-radius: 12px; background: var(--orange-glow); border: 1px solid rgba(245,124,0,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-  .sc-icon svg { width: 26px; height: 26px; stroke: var(--orange); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .sc-name { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--white); margin-bottom: 10px; }
-  .sc-desc { font-size: 14px; color: var(--white-70); line-height: 1.6; }
+/* Topo */
+.hero{padding:136px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.7fr);gap:72px;align-items:center}
+/* ALTERADO: hero h1 — mínimo reduzido para 38px (melhor em mobile <380px) */
+h1{font-family:var(--disp);font-weight:900;font-size:clamp(38px,6.4vw,76px);line-height:1.02;letter-spacing:.005em;margin-bottom:26px;max-width:15ch}
+.lead{font-size:20px;color:var(--text);max-width:52ch;margin-bottom:36px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.facts{list-style:none;display:flex;margin-top:40px;border-top:1px solid var(--line)}
+.facts li{flex:1;padding:20px 22px 0;border-left:1px solid var(--line);font-size:16px;color:var(--muted);line-height:1.45}
+.facts li:first-child{padding-left:0;border-left:0}
+.facts b{display:block;font-family:var(--disp);font-size:28px;font-weight:800;color:#fff;line-height:1.1;margin-bottom:4px}
+.photo{position:relative;isolation:isolate;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:900;font-size:54px;color:var(--orange)}
+.photo::after{content:'';position:absolute;inset:16px -16px -16px 16px;border:2px solid var(--orange);z-index:-1}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;background:linear-gradient(160deg,#103a78,#08203f)}
 
-  /* --- NOVO: CARD DE IA & AUTOMAÇÃO (ocupa 3 colunas) --- */
-  .service-card-full {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 40px;
-    align-items: center;
-  }
-  .sc-features {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .sc-feature-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--white-80);
-  }
-  .sc-feature-check {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--green-glow);
-    border: 1px solid var(--green-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .sc-feature-check svg {
-    width: 11px;
-    height: 11px;
-    stroke: #27AE60;
-    fill: none;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  /* -------------------------------------------------------- */
+/* Títulos de seção */
+h2{font-family:var(--disp);font-weight:900;font-size:clamp(38px,5vw,56px);line-height:1.05;letter-spacing:.01em;margin-bottom:16px}
+h2::before{content:"//";color:var(--orange);margin-right:14px}
+/* ALTERADO: .intro e .txt com opacidade aumentada para legibilidade WCAG AA */
+.intro{color:rgba(255,255,255,.82);font-size:19px;max-width:58ch;margin-bottom:36px}
+.txt{color:rgba(255,255,255,.82);font-size:18.5px;max-width:64ch;margin-bottom:16px}
 
-  #projetos { background: var(--navy); }
-  
-  .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+/* Trajetória */
+.flow{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:36px;margin-top:40px;position:relative}
+.flow::before{content:'';position:absolute;top:10px;left:11px;right:8px;height:2px;background:var(--orange)}
+.flow::after{content:'';position:absolute;top:3px;right:-4px;border:8px solid transparent;border-left:12px solid var(--orange);border-right:0}
+.flow li{position:relative;padding-top:44px;display:grid;grid-template-rows:subgrid;grid-row:span 2}
+.flow li::before{content:'';position:absolute;top:0;left:0;width:22px;height:22px;border-radius:50%;background:var(--panel);border:3px solid var(--orange)}
+.flow li:last-child::before{background:var(--orange)}
+/* ALTERADO: .flow b mobile pequeno — clamp reduz para <380px */
+.flow b{font-family:var(--disp);font-size:clamp(22px,5vw,29px);font-weight:800;line-height:1.12;letter-spacing:.01em;margin-bottom:10px}
+/* ALTERADO: .flow p opacidade aumentada */
+.flow p{font-size:17px;color:rgba(255,255,255,.78);line-height:1.6}
 
-  .project-card { 
-    background: var(--card-bg); 
-    border: 1px solid var(--border); 
-    border-radius: 12px; 
-    overflow: hidden; 
-    transition: all 0.3s; 
-    position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .project-card:hover { border-color: rgba(245,124,0,0.25); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-  .project-image-placeholder { 
-    width: 100%; 
-    height: 180px; 
-    background: linear-gradient(135deg, var(--navy-mid), var(--navy-dark)); 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: var(--white-30);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    position: relative;
-    border-bottom: 1px solid var(--border);
-  }
-  .project-image-placeholder::after {
-    content: 'EM BREVE';
-    position: absolute;
-    background: var(--orange);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .project-content { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-  .project-title { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 8px; }
-  .project-desc { font-size: 14px; color: var(--white-70); line-height: 1.6; flex: 1; }
-  .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-  .project-tag { font-size: 11px; font-weight: 700; color: var(--orange); background: var(--orange-glow); border: 1px solid rgba(245,124,0,0.3); padding: 4px 10px; border-radius: 4px; text-transform: uppercase; }
-  .project-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--orange); text-decoration: none; transition: gap 0.2s; }
-  .project-link:hover { gap: 10px; color: var(--orange-light); }
-  .project-link svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+/* Serviços — layout original .svc */
+.svc{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.5fr);background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:4px;margin-bottom:20px}
+.svc-h{padding:32px 34px;border-right:1px solid var(--line)}
+.svc h3{font-family:var(--disp);font-weight:900;font-size:40px;line-height:1.08;letter-spacing:.01em;margin-bottom:14px}
+.sum{font-size:18px;color:rgba(255,255,255,.82)}
+.svc dl{padding:14px 40px}
+.svc dl>div{padding:18px 0;border-top:1px solid var(--line)}
+.svc dl>div:first-child{border-top:0}
+.svc dt{font-weight:700;font-size:22px;line-height:1.3;color:var(--orange-l);margin-bottom:6px}
+.svc dd{font-size:17.5px;color:rgba(255,255,255,.78);line-height:1.65}
+/* ALTERADO: Steps — borda superior mais elegante + glow */
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+/* ALTERADO: border hairline + glow no topo */
+.steps li{
+  counter-increment:s;
+  border-top:1px solid rgba(245,124,0,.5);
+  box-shadow:0 -1px 0 rgba(245,124,0,.2);
+  padding-top:20px;
+}
+.steps li::before{content:counter(s);display:block;font-family:var(--disp);font-weight:900;font-size:64px;line-height:1;color:var(--orange);margin-bottom:14px}
+.steps b{display:block;font-family:var(--disp);font-weight:800;font-size:29px;line-height:1.12;margin-bottom:10px}
+/* ALTERADO: .steps span opacidade aumentada */
+.steps span{display:block;font-size:17.5px;color:rgba(255,255,255,.78);line-height:1.6}
 
-  #depoimentos { background: var(--navy-dark); position: relative; overflow: hidden; }
-  
-  .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+/* ============================================
+   ALTERADO: Seção Contato — redesenhada completa
+   ============================================ */
+.contact{background:var(--band);border-top:1px solid rgba(245,124,0,.3)} /* ALTERADO: borda hairline laranja */
+.contact-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);
+  gap:64px;
+  align-items:start;
+}
+.contact-eyebrow{
+  font-family:var(--disp);
+  font-weight:700;
+  font-size:15px;
+  color:var(--orange);
+  letter-spacing:.08em;
+  margin-bottom:20px;
+  text-transform:uppercase;
+}
+.contact-h2{
+  font-family:var(--disp);
+  font-weight:900;
+  font-size:clamp(36px,4.8vw,58px);
+  line-height:1.04;
+  letter-spacing:.01em;
+  margin-bottom:20px;
+  color:#fff;
+}
+.contact-h2::before{} /* herda o // laranja padrão do h2 */
+.contact-sub{
+  font-size:17.5px;
+  color:rgba(255,255,255,.72);
+  line-height:1.65;
+  max-width:44ch;
+  margin-bottom:28px;
+}
+.contact-links{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.contact-link{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  font-size:16px;
+  color:rgba(255,255,255,.75);
+  padding:10px 14px;
+  border-radius:8px;
+  border:1px solid transparent;
+  transition:color .2s,border-color .2s,background .2s;
+  width:fit-content;
+}
+.contact-link:hover{
+  color:#fff;
+  border-color:rgba(245,124,0,.25);
+  background:rgba(245,124,0,.06);
+}
+/* Formulário */
+.contact-form-wrap{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:16px;
+  padding:36px;
+  box-shadow:0 0 0 1px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.06);
+}
+.contact-form{display:flex;flex-direction:column;gap:20px}
+/* Floating labels */
+.field{position:relative}
+.f-input{
+  width:100%;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:8px;
+  color:#fff;
+  font-family:var(--body);
+  font-size:16px;
+  padding:22px 16px 8px;
+  outline:none;
+  transition:border-color .2s,box-shadow .2s;
+  -webkit-appearance:none;
+  appearance:none;
+}
+.f-input:focus{
+  border-color:rgba(245,124,0,.6);
+  box-shadow:0 0 0 3px rgba(245,124,0,.12);
+}
+.f-input:focus-visible{
+  outline:2px solid var(--orange-l);
+  outline-offset:2px;
+  border-radius:8px;
+}
+.f-input.invalid{
+  border-color:rgba(239,68,68,.6);
+  box-shadow:0 0 0 3px rgba(239,68,68,.1);
+}
+.f-label{
+  position:absolute;
+  left:16px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:15px;
+  color:rgba(255,255,255,.45);
+  pointer-events:none;
+  transition:top .18s ease,font-size .18s ease,color .18s ease,transform .18s ease;
+  line-height:1;
+}
+/* Floating state: quando há conteúdo */
+.f-input:focus~.f-label,
+.f-input:not(:placeholder-shown)~.f-label{
+  top:10px;
+  transform:none;
+  font-size:11px;
+  color:var(--orange-l);
+  font-weight:600;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+/* Select */
+.field-select{position:relative}
+.f-select{cursor:pointer;padding-right:40px}
+.f-select option{
+  background-color:#0a2244;
+  color:#ffffff;
+  padding:10px 14px;
+}
+.f-select option:disabled{
+  color:rgba(255,255,255,.4);
+  background-color:#061428;
+}
+/* Para select o float ativa via classe via JS */
+.f-select.has-value~.f-label{
+  top:10px;
+  transform:none;
+  font-size:11px;
+  color:var(--orange-l);
+  font-weight:600;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.select-arrow{
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+  pointer-events:none;
+  color:rgba(255,255,255,.4);
+}
+/* Textarea */
+.f-textarea{
+  resize:vertical;
+  min-height:110px;
+  padding-top:28px;
+}
+.f-textarea~.f-label{
+  top:20px;
+  transform:none;
+}
+.f-textarea:focus~.f-label,
+.f-textarea:not(:placeholder-shown)~.f-label{
+  top:8px;
+  transform:none;
+  font-size:11px;
+  color:var(--orange-l);
+  font-weight:600;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+/* Botão submit */
+.btn-submit{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  min-height:52px;
+}
+/* Feedback toast */
+.form-feedback{
+  font-size:14.5px;
+  line-height:1.5;
+  border-radius:8px;
+  padding:0;
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:max-height .3s ease,opacity .3s ease,padding .3s ease;
+}
+.form-feedback.show{
+  max-height:80px;
+  opacity:1;
+  padding:12px 16px;
+}
+.form-feedback.ok{
+  background:rgba(74,222,128,.1);
+  border:1px solid rgba(74,222,128,.25);
+  color:#4ade80;
+}
+.form-feedback.err{
+  background:rgba(239,68,68,.1);
+  border:1px solid rgba(239,68,68,.25);
+  color:#fca5a5;
+}
+/* Responsive contato */
+@media (max-width:820px){
+  .contact-grid{grid-template-columns:1fr;gap:44px}
+  .contact-form-wrap{padding:28px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  .f-label{transition:none}
+  .form-feedback{transition:none}
+}
 
-  .depo-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; position: relative; transition: all 0.3s; }
-  .depo-card:hover { border-color: rgba(245,124,0,0.15); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.25); }
-  .depo-quote { font-size: 14px; color: var(--white-80); line-height: 1.7; margin-bottom: 20px; font-style: italic; position: relative; padding-left: 16px; }
-  .depo-quote::before { content: '"'; position: absolute; left: 0; top: -4px; font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 900; color: var(--orange); line-height: 1; opacity: 0.35; }
-  .depo-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; }
-  .depo-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--orange), var(--orange-light)); display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 900; color: var(--white); flex-shrink: 0; }
-  .depo-name { font-size: 14px; font-weight: 700; color: var(--white); }
-  .depo-role { font-size: 11px; font-weight: 500; color: var(--white-50); letter-spacing: 0.04em; }
-  .depo-stars { display: flex; gap: 3px; margin-bottom: 4px; }
-  .depo-stars svg { width: 14px; height: 14px; fill: var(--orange); stroke: none; }
-  #diferenciais { background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy) 100%); }
-  
-  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 32px; }
+/* Ticker */
+.ticker{background:var(--orange);color:#1a0d00;overflow:hidden}
+.ticker-track{display:flex;width:max-content;animation:tick 46s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker ul{display:flex;flex-shrink:0;list-style:none}
+.ticker li{display:flex;align-items:center;padding:15px 0;font-family:var(--disp);font-weight:800;font-size:clamp(21px,2.6vw,26px);line-height:1;white-space:nowrap}
+.ticker li::after{content:'';width:8px;height:8px;margin:0 28px;background:#1a0d00;transform:rotate(45deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto}.ticker-track{animation:none}.ticker ul+ul{display:none}}
 
-  .why-list { display: flex; flex-direction: column; gap: 28px; }
-  .why-item { display: flex; gap: 20px; align-items: flex-start; }
-  .why-num { font-family: 'Barlow Condensed', sans-serif; font-size: 48px; font-weight: 900; line-height: 1; color: rgba(245,124,0,0.15); flex-shrink: 0; width: 52px; transition: color 0.3s; }
-  .why-item:hover .why-num { color: var(--orange); }
-  .why-text-title { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; text-transform: uppercase; color: var(--white); letter-spacing: 0.04em; margin-bottom: 6px; }
-  .why-text-desc { font-size: 14px; color: var(--white-70); line-height: 1.6; }
-  .why-visual { position: relative; }
-  .why-big-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 40px; backdrop-filter: blur(8px); }
-  .wbc-header { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
-  .wbc-logo { display: flex; align-items: baseline; gap: 2px; font-family: 'Barlow Condensed', sans-serif; }
-  .wbc-l1 { font-size: 22px; font-weight: 900; color: var(--orange); }
-  .wbc-l2 { font-size: 17px; font-weight: 700; color: rgba(255,255,255,0.9); }
-  .wbc-l3 { font-size: 19px; font-weight: 300; color: var(--white-30); margin: 0 2px; }
-  .wbc-l5 { font-size: 22px; font-weight: 900; color: var(--white); }
-  .wbc-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); background: var(--orange-glow); border: 1px solid rgba(245,124,0,0.3); padding: 3px 10px; border-radius: 10px; }
-  .wbc-items { display: flex; flex-direction: column; gap: 14px; }
-  .wbc-item { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--white-5); border-radius: 8px; border: 1px solid var(--border); }
-  .wbc-check { width: 22px; height: 22px; border-radius: 50%; background: var(--green-glow); border: 1px solid var(--green-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .wbc-check svg { width: 12px; height: 12px; stroke: #27AE60; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-  .wbc-item-text { font-size: 14px; font-weight: 600; color: var(--white-80); }
-  #atendimento { background: var(--navy); }
-  
-  .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 32px; }
-  
-  .location-desc { font-size: 17px; color: var(--white-70); line-height: 1.7; margin-bottom: 32px; }
-  .location-desc strong { color: var(--white); font-weight: 700; }
-  .location-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
-  .loc-chip { display: flex; align-items: center; gap: 7px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--white-70); }
-  .loc-chip-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 6px var(--orange); }
-  .location-map { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; height: 360px; position: relative; }
-  .map-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: linear-gradient(135deg, rgba(13,45,94,0.8), rgba(7,20,50,0.9)); position: relative; overflow: hidden; }
-  .map-grid-lines { position: absolute; inset: 0; background-image: linear-gradient(rgba(245,124,0,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(245,124,0,0.06) 1px, transparent 1px); background-size: 40px 40px; }
-  .map-pin { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; }
-  .map-pin-icon { width: 52px; height: 52px; border-radius: 50%; background: var(--orange); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 12px rgba(245,124,0,0.15), 0 0 0 24px rgba(245,124,0,0.07); animation: mapPulse 2.5s infinite; margin-bottom: 12px; }
-  @keyframes mapPulse { 0%, 100% { box-shadow: 0 0 0 12px rgba(245,124,0,0.15), 0 0 0 24px rgba(245,124,0,0.07); } 50% { box-shadow: 0 0 0 18px rgba(245,124,0,0.1), 0 0 0 36px rgba(245,124,0,0.04); } }
-  .map-pin-icon svg { width: 24px; height: 24px; stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-  .map-city { font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 900; color: var(--white); text-transform: uppercase; letter-spacing: 0.05em; position: relative; z-index: 2; }
-  .map-state { font-size: 13px; font-weight: 600; color: var(--white-50); letter-spacing: 0.12em; text-transform: uppercase; position: relative; z-index: 2; }
-  
-  #contato { background: var(--navy-dark); text-align: center; padding: 80px 0; }
+/* Entrada única do topo */
+@media (prefers-reduced-motion:no-preference){
+  .hero .wrap>*{animation:in .8s ease both}
+  .hero .wrap>*:last-child{animation-delay:.15s}
+  @keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+/* prefers-reduced-motion global — cobre todos os elementos incluindo novos */
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
-  .cta-wrap { max-width: 680px; margin: 0 auto; }
-  .cta-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(42px, 6vw, 72px); font-weight: 900; text-transform: uppercase; line-height: 0.92; letter-spacing: -0.01em; margin-bottom: 24px; }
-  .cta-title span { color: var(--orange); }
-  .cta-desc { font-size: 17px; color: var(--white-80); line-height: 1.7; margin-bottom: 40px; }
-  .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  footer { background: var(--navy-dark); border-top: 1px solid var(--border); padding: 32px 0; }
-  .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-  .footer-copy { font-size: 13px; color: var(--white-50); }
-  .footer-copy span { color: var(--orange); }
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  @media (max-width: 900px) { .hero-content { grid-template-columns: 1fr; gap: 48px; } .hero-right { justify-content: center; } .services-grid { grid-template-columns: 1fr 1fr; } .service-card-full { grid-template-columns: 1fr; gap: 24px; } .projects-grid { grid-template-columns: 1fr 1fr; } .depoimentos-grid { grid-template-columns: 1fr; } .why-grid, .location-grid { grid-template-columns: 1fr; gap: 48px; } .nav-links { display: none; } }
-  @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } .projects-grid { grid-template-columns: 1fr; } .hero-stats { gap: 24px; } .svc-grid { grid-template-columns: 1fr; } }
+footer{padding:28px 0;background:#040e1d;font-size:15px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media (max-width:960px){
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 32px}
+}
+@media (max-width:820px){
+  nav .btn{display:none}
+  .burger{display:inline-flex}
+  .m-only{display:block}
+  .menu{display:none;position:fixed;top:68px;left:0;right:0;flex-direction:column;gap:0;margin:0;padding:6px 28px 14px;background:#061428;border-bottom:1px solid var(--line)}
+  nav.open .menu{display:flex}
+  .menu a{display:block;padding:15px 0;border-bottom:1px solid var(--line);font-size:18px}
+  .menu li:last-child a{border-bottom:0;color:#25D366;font-weight:700}
+  .hero{padding:104px 0 44px}
+  .hero .wrap{grid-template-columns:1fr;gap:48px}
+  .photo{order:-1;width:150px;aspect-ratio:1/1;font-size:34px}
+  .photo::after{inset:10px -10px -10px 10px}
+  .facts{flex-direction:column;border-top:0;margin-top:40px}
+  .facts li{padding:16px 0;border-left:0;border-top:1px solid var(--line)}
+}
+@media (max-width:720px){
+  body{font-size:17.5px}
+  .wrap{padding:0 22px}
+  .flow{grid-template-columns:1fr;gap:34px;padding-left:40px;margin-top:40px}
+  .flow::before{top:10px;bottom:8px;left:10px;right:auto;width:2px;height:auto}
+  .flow::after{top:auto;bottom:-6px;left:3px;right:auto;border:8px solid transparent;border-top:12px solid var(--orange);border-bottom:0}
+  .flow li{display:block;grid-row:auto;padding-top:0}
+  .flow li::before{left:-40px;top:2px}
+  .steps{grid-template-columns:1fr;gap:36px}
+  .logo{font-size:27px}
+}
+@media (max-width:420px){.cta .btn{width:100%}}
 </style>
 </head>
 <body>
+<a href="#conteudo" class="skip">Pular para o conteúdo</a>
 
-<nav id="nav">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-b">[<span class="logo-i">&lt;</span></span>
-        <span class="logo-f">Erlan</span>
-        <span class="logo-s">/</span>
-        <span class="logo-l">Campos</span>
-        <span class="logo-rb"><span class="logo-i">&gt;</span>]</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#depoimentos">Clientes</a></li>
-        <li><a href="#diferenciais">Diferenciais</a></li>
-        <li><a href="#atendimento">Atendimento</a></li>
-        <li><a href="#contato" class="nav-cta">Fale Comigo</a></li>
-      </ul>
-    </div>
+<nav aria-label="Principal">
+  <div class="wrap">
+    <a href="#topo" class="logo" aria-label="Erlan Campos, início"><span class="logo-b">[<span class="logo-i">&lt;</span></span><span class="logo-f">Erlan</span><span class="logo-s">/</span><span class="logo-l">Campos</span><span class="logo-rb"><span class="logo-i">&gt;</span>]</span></a>
+    <ul class="menu" id="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#como">Como funciona</a></li>
+      <li class="m-only"><a href="#contato" data-wa>Falar no WhatsApp</a></li>
+    </ul>
+    <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="#contato" data-wa class="btn btn-p">WhatsApp</a>
   </div>
 </nav>
 
-<section id="hero">
-  <div class="hero-bg">
-    <div class="hero-grid"></div>
-    <div class="hero-circle1"></div>
-    <div class="hero-circle2"></div>
-    <div class="hero-circle3"></div>
-    <div class="hero-line-v"></div>
-  </div>
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-left">
-        <div class="hero-badge"><div class="hero-badge-dot"></div>Disponível para novos projetos</div>
-        <div class="hero-logo">
-          <span class="hl-b">[<span class="hl-i">&lt;</span></span>
-          <span class="hl-f">Erlan</span>
-          <span class="hl-s">/</span>
-          <span class="hl-l">Campos</span>
-          <span class="hl-rb"><span class="hl-i">&gt;</span>]</span>
-        </div>
-        <div class="hero-role">Desenvolvedor Web &amp; T.I Profissional</div>
-        <p class="hero-desc">Transformo a <strong>presença digital do seu negócio</strong> com sites profissionais, otimização para Google e suporte técnico completo.<br>Atendo <strong>Vitória da Conquista</strong> e toda a região.</p>
-        <div class="hero-actions">
-          <a href="https://wa.me/5577999880394" target="_blank" class="btn-primary">
-            <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            Solicitar Orçamento
-          </a>
-          <a href="#servicos" class="btn-secondary">Ver Serviços</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat-item"><div class="stat-num">27<span>+</span></div><div class="stat-label">Clientes Atendidos</div></div>
-          <div class="stat-item"><div class="stat-num">4<span>+</span></div><div class="stat-label">Anos de Experiência</div></div>
-        </div>
-        <div class="response-badge"><div class="response-badge-dot"></div>Resposta em menos de 1 hora</div>
+<header class="hero" id="topo">
+  <div class="wrap">
+    <div>
+      <h1>Sites, sistemas e suporte de T.I para o seu negócio funcionar melhor.</h1>
+      <p class="lead">Sou o Erlan, desenvolvedor web e analista de T.I Entendo o seu problema a fundo e a realidade do seu negócio antes de propor a solução ideal.</p>
+      <div class="cta">
+        <a href="#contato" class="btn btn-p">Pedir um orçamento</a>
+        <a href="#servicos" class="btn btn-g">Ver o que eu faço</a>
       </div>
-      <div class="hero-right">
-        <div class="hero-photo-card">
-          <img src="erlan.png" alt="Erlan Campos - Desenvolvedor Web & T.I">
-          
-          <div class="photo-overlay">
-            <div class="photo-name">Erlan Campos</div>
-            <div class="photo-role">Desenvolvedor Web & T.I<br>Profissional</div>
-          </div>
-        </div>
-      </div>
+      <ul class="facts">
+        <li><b>ERP e dados</b>sistemas e relatórios</li>
+        <li><b>Web e suporte</b>sites, sistemas e computadores</li>
+      </ul>
     </div>
+    <div class="photo"><img src="erlan.png" alt="Erlan Campos" width="640" height="800" fetchpriority="high" decoding="async"></div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <ul><li>Landing Pages</li><li>SEO e Google Meu Negócio</li><li>Analytics</li><li>Sistemas Web</li><li>IA e Automação</li><li>Dados e Processos</li><li>ERP</li><li>Formatação e backup</li><li>Remoção de vírus</li><li>Upgrade de SSD e RAM</li></ul>
+    <ul><li>Landing Pages</li><li>SEO e Google Meu Negócio</li><li>Analytics</li><li>Sistemas Web</li><li>IA e Automação</li><li>Dados e Processos</li><li>ERP</li><li>Formatação e backup</li><li>Remoção de vírus</li><li>Upgrade de SSD e RAM</li></ul>
+  </div>
+</div>
+
+
+<main id="conteudo">
+<section id="sobre" class="alt">
+  <div class="wrap">
+    <h2>Quem sou eu</h2>
+    <p class="txt">Minha trajetória começou na operação de empresas — lidando diretamente com produção, fluxo financeiro e faturamento — antes de migrar definitivamente para a tecnologia. Atualmente, gerencio sistemas ERP complexos e análise de dados.</p>
+    <p class="txt">Essa visão de ponta a ponta significa que não entrego apenas código ou formatações vazias: desenvolvo soluções tecnológicas alinhadas com a realidade operacional da sua empresa.</p>
+    <ol class="flow" aria-label="Minha trajetória profissional, da operação até a tecnologia">
+      <li><b>Gestão Financeira &amp; Operacional</b><p>Acompanhamento de rotinas produtivas, fluxo de caixa e emissão de NFs em indústrias e hospitais.</p></li>
+      <li><b>Análise de Dados &amp; ERP</b><p>Integração de processos entre finanças, comercial e operações utilizando inteligência de dados.</p></li>
+      <li><b>Engenharia Web &amp; Suporte</b><p>Desenvolvimento de soluções web escaláveis e manutenção de infraestrutura de hardware.</p></li>
+    </ol>
   </div>
 </section>
 
-<section id="servicos" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-tag">O que eu faço</div>
-      <h2 class="section-title">Serviços<br><span>Disponíveis</span></h2>
-    </div>
-    <div class="services-grid">
-      <div class="service-subtitle">// Criação Web</div>
-      <div class="service-card reveal"><div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="sc-name">Sites & Landing Pages</div><div class="sc-desc">Sites profissionais e landing pages otimizadas para converter visitantes em clientes. Design exclusivo e responsivo para todos os dispositivos.</div></div>
-      <div class="service-card reveal"><div class="sc-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div><div class="sc-name">SEO & Google</div><div class="sc-desc">Posicionamento no Google, configuração do Google Meu Negócio e estratégias de SEO para seu negócio aparecer nas primeiras posições.</div></div>
-      <div class="service-card reveal"><div class="sc-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="sc-name">Analytics & Performance</div><div class="sc-desc">Monitoramento completo com Google Analytics, relatórios de desempenho e insights para tomada de decisão baseada em dados reais.</div></div>
-      <div class="service-card reveal"><div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><div class="sc-name">Criação de SaaS</div><div class="sc-desc">Desenvolvimento de sistemas web personalizados para seu negócio — automações, controles internos e soluções digitais sob medida.</div></div>
-      
-      <!-- NOVO SERVIÇO: IA & AUTOMAÇÃO -->
-      <div class="service-subtitle" style="margin-top: 16px;">// Inteligência Artificial</div>
-      <div class="service-card service-card-full reveal">
-        <div>
-          <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg></div>
-          <div class="sc-name">IA & Automação</div>
-          <div class="sc-desc">Soluções inteligentes com inteligência artificial para automatizar tarefas e economizar tempo.</div>
-        </div>
-        <ul class="sc-features">
-          <li class="sc-feature-item"><span class="sc-feature-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Criação de chatbots inteligentes para atendimento 24h</li>
-          <li class="sc-feature-item"><span class="sc-feature-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Automação de respostas no WhatsApp e Instagram</li>
-          <li class="sc-feature-item"><span class="sc-feature-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Geração automática de conteúdos e relatórios com IA</li>
-          <li class="sc-feature-item"><span class="sc-feature-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Integração com ChatGPT e outras ferramentas de IA</li>
-        </ul>
-      </div>
-      <!-- FIM DO NOVO SERVIÇO -->
+<section id="servicos">
+  <div class="wrap">
+    <h2>O que eu faço</h2>
+    <p class="intro">Três áreas de atuação. Em cada uma, explico o que é o serviço e o que você ganha com ele.</p>
 
-      <div class="service-subtitle" style="margin-top: 16px;">// Suporte Técnico</div>
-      <div class="service-card reveal"><div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div><div class="sc-name">Formatação & Limpeza</div><div class="sc-desc">Formatação completa com backup, limpeza física interna, remoção de vírus e malwares. Seu computador como novo, rápido e seguro.</div></div>
-      <div class="service-card reveal"><div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="sc-name">Suporte & Manutenção</div><div class="sc-desc">Suporte remoto ou presencial, instalação de programas, otimização de desempenho e upgrade de peças (SSD, memória RAM e mais).</div></div>
-    </div>
+    <article class="svc">
+      <div class="svc-h"><h3>Sites e presença no Google</h3><p class="sum">Para quem quer ser encontrado na internet e receber contatos de clientes.</p></div>
+      <dl>
+        <div><dt>Landing Page</dt><dd>Uma página única, pensada para o visitante fazer uma ação, como chamar você no WhatsApp. Funciona bem no celular e serve para anúncios no Google e Instagram.</dd></div>
+        <div><dt>SEO e Google Meu Negócio</dt><dd>Ajuste do seu perfil e das palavras-chave da sua região, para aparecer melhor na busca e no mapa sem pagar por anúncio.</dd></div>
+        <div><dt>Analytics</dt><dd>Configuração do Google Analytics, com relatórios simples de visitas, cliques e contatos, para você saber o que está funcionando.</dd></div>
+      </dl>
+    </article>
+
+    <article class="svc">
+      <div class="svc-h"><h3>Sistemas, dados e automação</h3><p class="sum">Para quem quer organizar a rotina da empresa e perder menos tempo com tarefas repetidas.</p></div>
+      <dl>
+        <div><dt>Sistemas Web (SaaS)</dt><dd>Sistemas sob medida para controlar clientes, finanças e vendas. Abrem direto no navegador, sem instalar nada.</dd></div>
+        <div><dt>IA e Automação</dt><dd>Chatbots para atendimento 24h, respostas automáticas no WhatsApp e Instagram, e relatórios gerados com ajuda de inteligência artificial.</dd></div>
+        <div><dt>Dados e Processos</dt><dd>Levantamento do que a empresa precisa, relatórios confiáveis para decidir e planejar custos, e mapeamento dos pontos onde o trabalho trava ou dá erro.</dd></div>
+      </dl>
+    </article>
+
+    <article class="svc">
+      <div class="svc-h"><h3>Suporte técnico</h3><p class="sum">Para computador lento, com defeito ou que precisa de uma melhoria.</p></div>
+      <dl>
+        <div><dt>Formatação completa</dt><dd>O sistema é reinstalado do zero. Antes, faço o backup dos seus arquivos, e depois instalo e configuro os programas essenciais.</dd></div>
+        <div><dt>Limpeza interna e pasta térmica</dt><dd>Remoção de poeira de ventoinhas, placa e cooler, com troca da pasta térmica do processador. O computador esquenta menos e fica mais silencioso.</dd></div>
+        <div><dt>Remoção de vírus</dt><dd>Diagnóstico, remoção das ameaças e configuração de um antivírus eficiente para proteger seus dados.</dd></div>
+        <div><dt>Upgrade de SSD e memória RAM</dt><dd>Troca de peças que deixam o computador muito mais rápido, sem precisar comprar um novo.</dd></div>
+      </dl>
+    </article>
   </div>
 </section>
 
-<section id="projetos" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-tag">Meu Portfólio</div>
-      <h2 class="section-title">Projetos<br><span>Realizados</span></h2>
-    </div>
-    <div class="projects-grid">
-      
-      <div class="project-card reveal">
-        <div class="project-image-placeholder">
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Nome do Projeto</h3>
-          <p class="project-desc">Breve descrição do que foi feito, qual problema resolveu e quais tecnologias foram usadas.</p>
-          <div class="project-tags">
-            <span class="project-tag">HTML</span>
-            <span class="project-tag">CSS</span>
-            <span class="project-tag">JS</span>
-          </div>
-          <a href="#" class="project-link">
-            Ver Projeto 
-            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
+<section id="como" class="alt">
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <p class="intro">Um processo simples, para você saber o que esperar em cada etapa.</p>
+    <ol class="steps">
+      <li><b>Você me chama</b><span>Pelo WhatsApp, você explica o que precisa. A conversa e o orçamento não têm compromisso.</span></li>
+      <li><b>Eu entendo o seu caso</b><span>Faço as perguntas certas sobre o seu negócio ou sobre o problema do computador.</span></li>
+      <li><b>Eu executo</b><span>Faço o trabalho combinado e mantenho você informado durante o processo.</span></li>
+      <li><b>Entrega e acompanhamento</b><span>Você confere o resultado e eu tiro suas dúvidas depois da entrega.</span></li>
+    </ol>
+  </div>
+</section>
 
-      <div class="project-card reveal">
-        <div class="project-image-placeholder"></div>
-        <div class="project-content">
-          <h3 class="project-title">Nome do Projeto</h3>
-          <p class="project-desc">Breve descrição do que foi feito, qual problema resolveu e quais tecnologias foram usadas.</p>
-          <div class="project-tags">
-            <span class="project-tag">React</span>
-            <span class="project-tag">Node</span>
-          </div>
-          <a href="#" class="project-link">
-            Ver Projeto 
-            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+<!-- ALTERADO: Seção contato totalmente redesenhada com formulário + floating labels -->
+<section id="contato" class="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <!-- COLUNA ESQUERDA -->
+      <div class="contact-info">
+        <h2 class="contact-h2">Vamos iniciar<br>seu projeto?</h2>
+        <p class="contact-sub">Seja para criar um sistema do zero, posicionar sua empresa no Google ou reviver um computador lento, estou à disposição para ajudar.</p>
+        <!-- Links diretos -->
+        <div class="contact-links">
+          <a href="#contato" data-mail class="contact-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            E-mail
+          </a>
+          <a href="#contato" data-ig class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+            Instagram
+          </a>
+          <a href="#contato" data-li class="contact-link" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
           </a>
         </div>
       </div>
 
-      <div class="project-card reveal">
-        <div class="project-image-placeholder"></div>
-        <div class="project-content">
-          <h3 class="project-title">Nome do Projeto</h3>
-          <p class="project-desc">Breve descrição do que foi feito, qual problema resolveu e quais tecnologias foram usadas.</p>
-          <div class="project-tags">
-            <span class="project-tag">SEO</span>
-            <span class="project-tag">WordPress</span>
+      <!-- COLUNA DIREITA: FORMULÁRIO -->
+      <div class="contact-form-wrap">
+        <form id="form-contato" class="contact-form" novalidate aria-label="Formulário de contato">
+          <!-- Nome -->
+          <div class="field">
+            <input type="text" id="f-nome" name="nome" class="f-input" required aria-required="true" placeholder=" " autocomplete="name">
+            <label for="f-nome" class="f-label">Seu nome</label>
           </div>
-          <a href="#" class="project-link">
-            Ver Projeto 
-            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="depoimentos" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-tag">Quem confia no meu trabalho</div>
-      <h2 class="section-title">Depoimentos<br><span>de Clientes</span></h2>
-    </div>
-    <div class="depoimentos-grid">
-      <div class="depo-card reveal">
-        <div class="depo-quote">Serviço impecável. Meu site ficou exatamente como eu queria, rápido e elegante. Já apareci na primeira página do Google em menos de 2 meses.</div>
-        <div class="depo-author">
-          <div class="depo-avatar">MR</div>
-          <div><div class="depo-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div><div class="depo-name">Marcos Ribeiro</div><div class="depo-role">Dentista </div></div>
-        </div>
-      </div>
-      <div class="depo-card reveal">
-        <div class="depo-quote">Precisava de um sistema simples para controle de clientes e o Erlan entregou muito além do que imaginei. Atendimento sensacional, sempre disponível.</div>
-        <div class="depo-author">
-          <div class="depo-avatar">AS</div>
-          <div><div class="depo-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div><div class="depo-name">Ana Souza</div><div class="depo-role">Proprietária de Salão </div></div>
-        </div>
-      </div>
-      <div class="depo-card reveal">
-        <div class="depo-quote">Meu computador voltou a ser rápido depois da limpeza e formatação. Ele fez backup de tudo, não perdi nada. Trabalho nota 10 e preço justo.</div>
-        <div class="depo-author">
-          <div class="depo-avatar">JP</div>
-          <div><div class="depo-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg></div><div class="depo-name">João Pedro Alves</div><div class="depo-role">Estudante </div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="diferenciais" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-tag">Por que me escolher</div>
-      <h2 class="section-title">Meus<br><span>Diferenciais</span></h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-list">
-        <div class="why-item reveal"><div class="why-num">01</div><div><div class="why-text-title">Atendimento Local e Pessoal</div><div class="why-text-desc">Estou em Vitória da Conquista e atendo pessoalmente. Você fala diretamente comigo, sem intermediários, com total atenção ao seu projeto.</div></div></div>
-        <div class="why-item reveal"><div class="why-num">02</div><div><div class="why-text-title">Entrega Rápida e Garantida</div><div class="why-text-desc">Prazos cumpridos e qualidade garantida. Não terceirizo seu projeto — entrego eu mesmo, com responsabilidade e comprometimento.</div></div></div>
-        <div class="why-item reveal"><div class="why-num">03</div><div><div class="why-text-title">Preço Justo para a Região</div><div class="why-text-desc">Trabalho com valores acessíveis e transparentes, sem surpresas. Investimento adequado à realidade do mercado local.</div></div></div>
-        <div class="why-item reveal"><div class="why-num">04</div><div><div class="why-text-title">Suporte Pós-Projeto</div><div class="why-text-desc">Não desapareço depois de entregar. Ofereço suporte contínuo para garantir que tudo funcione perfeitamente a longo prazo.</div></div></div>
-      </div>
-      <div class="why-visual reveal">
-        <div class="why-big-card">
-          <div class="wbc-header">
-            <div class="wbc-logo">
-              <span class="wbc-l1">[<span class="wbc-l2">&lt;</span></span>
-              <span style="font-family:'Barlow',sans-serif;font-size:16px;font-weight:300;color:rgba(255,255,255,0.9);letter-spacing:1px;">Erlan</span>
-              <span class="wbc-l3">/</span>
-              <span style="font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:900;color:#fff;">Campos</span>
-              <span class="wbc-l5"><span class="wbc-l2">&gt;</span>]</span>
-            </div>
-            <div class="wbc-tag">Profissional</div>
+          <!-- WhatsApp/E-mail -->
+          <div class="field">
+            <input type="text" id="f-contato-val" name="contato" class="f-input" required aria-required="true" placeholder=" " autocomplete="tel">
+            <label for="f-contato-val" class="f-label">WhatsApp ou E-mail</label>
           </div>
-          <div class="wbc-items">
-            <div class="wbc-item"><div class="wbc-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="wbc-item-text">Atendimento remoto e presencial</div></div>
-            <div class="wbc-item"><div class="wbc-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="wbc-item-text">Sites responsivos para celular e desktop</div></div>
-            <div class="wbc-item"><div class="wbc-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="wbc-item-text">Backup completo antes de qualquer serviço</div></div>
-            <div class="wbc-item"><div class="wbc-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="wbc-item-text">Orientação e treinamento inclusos</div></div>
-            <div class="wbc-item"><div class="wbc-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="wbc-item-text">Garantia em todos os serviços</div></div>
-            <div class="wbc-item"><div class="wbc-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="wbc-item-text">Resposta rápida via WhatsApp</div></div>
+          <!-- Tipo de Projeto -->
+          <div class="field field-select">
+            <select id="f-tipo" name="tipo" class="f-input f-select" required aria-required="true">
+              <option value="" disabled selected></option>
+              <option value="Site / Landing Page">Site / Landing Page</option>
+              <option value="Sistema sob medida">Sistema sob medida</option>
+              <option value="Automação com IA">Automação com IA</option>
+              <option value="Suporte Técnico">Suporte Técnico</option>
+            </select>
+            <label for="f-tipo" class="f-label">Tipo de projeto</label>
+            <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="atendimento" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-tag">Onde atendo</div>
-      <h2 class="section-title">Vitória da<br><span>Conquista</span> e Região</h2>
-    </div>
-    <div class="location-grid">
-      <div class="location-info reveal">
-        <p class="location-desc">Atendo presencialmente toda a cidade e região. Para serviços de TI e suporte técnico, o atendimento é domiciliar ou na sua empresa.<br><br>Para serviços de desenvolvimento web, o atendimento pode ser <strong>100% remoto</strong>, alcançando clientes em qualquer lugar do Brasil.</p>
-        <div class="location-chips">
-          <div class="loc-chip"><div class="loc-chip-dot"></div>Vitória da Conquista</div>
-          <div class="loc-chip"><div class="loc-chip-dot"></div>Brumado</div>
-          <div class="loc-chip"><div class="loc-chip-dot"></div>Jequié</div>
-          <div class="loc-chip"><div class="loc-chip-dot"></div>Poções</div>
-          <div class="loc-chip"><div class="loc-chip-dot"></div>Itapetinga</div>
-          <div class="loc-chip"><div class="loc-chip-dot"></div>Todo o Brasil</div>
-        </div>
-        <a href="https://wa.me/5577999880394" target="_blank" class="btn-primary" style="width:fit-content;">
-          <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          Solicitar Visita
-        </a>
-      </div>
-      <div class="location-map reveal">
-        <div class="map-placeholder">
-          <div class="map-grid-lines"></div>
-          <div class="map-pin">
-            <div class="map-pin-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div class="map-city">Vitória da Conquista</div>
-            <div class="map-state">Bahia — Brasil</div>
+          <!-- Mensagem -->
+          <div class="field">
+            <textarea id="f-msg" name="mensagem" class="f-input f-textarea" required aria-required="true" rows="4" placeholder=" "></textarea>
+            <label for="f-msg" class="f-label">Mensagem</label>
           </div>
-        </div>
+          <!-- Submit -->
+          <button type="submit" class="btn btn-p btn-submit">
+            Enviar mensagem
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <!-- Feedback -->
+          <div id="form-feedback" class="form-feedback" role="status" aria-live="polite" aria-atomic="true"></div>
+        </form>
       </div>
     </div>
   </div>
 </section>
-
-<section id="contato">
-  <div class="container">
-    <div class="cta-wrap reveal">
-      <div class="section-tag" style="justify-content:center;">Vamos conversar</div>
-      <h2 class="cta-title">Pronto para<br><span>Começar?</span></h2>
-      <p class="cta-desc">Entre em contato agora e receba um orçamento gratuito e sem compromisso.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/5577999880394" target="_blank" class="btn-primary">
-          <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          FALE COMIGO
-        </a>
-        <a href="mailto:erlancampos.dev@outlook.com" class="btn-secondary">Enviar E-mail</a>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
 <footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-copy">© 2025 <span>[&lt;Erlan / Campos&gt;]</span> · Desenvolvedor Web & T.I Profissional</div>
-      <div class="footer-copy">Vitória da Conquista — <span>Bahia</span></div>
-    </div>
+  <div class="wrap">
+    <span>© <span id="ano"></span> Erlan Campos</span>
+    <a href="#topo">Voltar ao topo</a>
   </div>
 </footer>
 
 <script>
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add('visible'), i * 80); observer.unobserve(entry.target); }
+/* ===== PREENCHA AQUI SEUS DADOS ===== */
+const CONFIG = {
+  whatsapp: "",   // com DDD. Ex.: "77999999999" (o 55 é adicionado sozinho)
+  instagram: "",  // link completo. Ex.: "https://instagram.com/seuusuario"
+  linkedin: "",   // link completo do seu perfil
+  email: "",      // Ex.: "contato@seudominio.com"
+  mensagem: "Olá, Erlan! Vim pelo seu site e gostaria de um orçamento."
+};
+/* ==================================== */
+(function(){
+  var d = document;
+  var num = (CONFIG.whatsapp || "").replace(/\D/g, "");
+  if (num && num.length <= 11) num = "55" + num;
+  var wa = num ? "https://wa.me/" + num + "?text=" + encodeURIComponent(CONFIG.mensagem) : null;
+  function link(sel, href, hideIfEmpty){
+    d.querySelectorAll(sel).forEach(function(a){
+      if (href){ a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; }
+      else if (hideIfEmpty){ a.style.display = "none"; }
     });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
+  }
+  link("[data-wa]", wa, false);
+  link("[data-ig]", CONFIG.instagram, true);
+  link("[data-li]", CONFIG.linkedin, true);
+  d.querySelectorAll("[data-mail]").forEach(function(a){
+    if (CONFIG.email) a.href = "mailto:" + CONFIG.email; else a.style.display = "none";
+  });
+  d.getElementById("ano").textContent = new Date().getFullYear();
+
+  /* Menu no celular */
+  var nav = d.querySelector("nav"), burger = d.querySelector(".burger");
+  // ALTERADO: setMenu com scroll lock no mobile
+  function setMenu(open){
+    nav.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", open);
+    burger.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    document.body.style.overflow = open ? "hidden" : ""; // ALTERADO: scroll lock
+  }
+  burger.addEventListener("click", function(){ setMenu(!nav.classList.contains("open")); });
+  d.querySelectorAll(".menu a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+  d.addEventListener("keydown", function(e){ if (e.key === "Escape") setMenu(false); });
+
+  /* Seção ativa no menu */
+  if ("IntersectionObserver" in window){
+    var links = [].slice.call(d.querySelectorAll(".menu a[href^='#']:not([data-wa])"));
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        links.forEach(function(l){
+          if (l.getAttribute("href") === "#" + e.target.id) l.setAttribute("aria-current", "true");
+          else l.removeAttribute("aria-current");
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    ["sobre", "servicos", "como"].forEach(function(id){ var s = d.getElementById(id); if (s) spy.observe(s); });
+  }
+
+
+  // ALTERADO: Formulário de contato com floating label no select e validação
+  (function(){
+    var form = d.getElementById("form-contato");
+    if (!form) return;
+
+    /* Select floating label */
+    var sel = d.getElementById("f-tipo");
+    if (sel){
+      sel.addEventListener("change", function(){
+        this.classList.toggle("has-value", this.value !== "");
+      });
+    }
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var valid = true;
+      form.querySelectorAll(".f-input").forEach(function(input){
+        input.classList.remove("invalid");
+        if (!input.checkValidity()){
+          input.classList.add("invalid");
+          valid = false;
+        }
+      });
+      if (!valid){
+        showFeedback("Por favor, preencha todos os campos obrigatórios.", "err");
+        return;
+      }
+      var nome = d.getElementById("f-nome").value.trim();
+      var contato = d.getElementById("f-contato-val").value.trim();
+      var tipo = d.getElementById("f-tipo").value;
+      var msg = d.getElementById("f-msg").value.trim();
+      var texto = [
+        "Olá, Erlan! Vim pelo seu site. 👋",
+        "",
+        "📋 *Tipo de projeto:* " + tipo,
+        "👤 *Nome:* " + nome,
+        "📞 *Contato:* " + contato,
+        "",
+        "💬 *Mensagem:*",
+        msg
+      ].join("\n");
+      var n = (CONFIG.whatsapp || "").replace(/\D/g, "");
+      if (n && n.length <= 11) n = "55" + n;
+      if (!n){
+        showFeedback("WhatsApp não configurado. Use os links diretos abaixo.", "err");
+        return;
+      }
+      showFeedback("Redirecionando para o WhatsApp... 💬", "ok");
+      setTimeout(function(){
+        window.open("https://wa.me/" + n + "?text=" + encodeURIComponent(texto), "_blank", "noopener,noreferrer");
+      }, 600);
+    });
+
+    /* Remove invalid ao digitar */
+    form.querySelectorAll(".f-input").forEach(function(input){
+      input.addEventListener("input", function(){ this.classList.remove("invalid"); });
+    });
+
+    function showFeedback(msg, type){
+      var fb = d.getElementById("form-feedback");
+      fb.textContent = msg;
+      fb.className = "form-feedback show " + type;
+    }
+  })();
+
+})();
 </script>
 </body>
 </html>
