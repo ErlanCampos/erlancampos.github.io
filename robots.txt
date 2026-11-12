@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://github.com/ErlanCampos/Camposdev/sitemap.xml
