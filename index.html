@@ -330,6 +330,9 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
+footer{padding:28px 0;background:#040e1d;font-size:15px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
 @media (max-width: 960px){
   .svc{grid-template-columns:1fr;margin-bottom:16px}
   .svc-h{border-right:0;border-bottom:1px solid var(--line);padding:26px 24px 20px}
@@ -531,6 +534,9 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
 
   .ticker li{padding:12px 0;font-size:18px}
   .ticker li::after{margin:0 16px;width:6px;height:6px}
+
+  footer{padding:22px 0;text-align:center}
+  footer .wrap{flex-direction:column;align-items:center;gap:10px}
 }
 
 @media (max-width: 380px){
@@ -706,6 +712,12 @@ h2::before{content:"//";color:var(--orange);margin-right:14px}
 </section>
 </main>
 
+<footer>
+  <div class="wrap">
+    <span>© 2026 Erlan Campos - Todos os direitos reservados</span>
+  </div>
+</footer>
+
 <script>
 const CONFIG = {
   whatsapp: "77999880394",
@@ -731,7 +743,6 @@ const CONFIG = {
   d.querySelectorAll("[data-mail]").forEach(function(a){
     if (CONFIG.email) a.href = "mailto:" + CONFIG.email; else a.style.display = "none";
   });
-  d.getElementById("ano").textContent = new Date().getFullYear();
 
   var nav = d.querySelector("nav"), burger = d.querySelector(".burger");
   function setMenu(open){
